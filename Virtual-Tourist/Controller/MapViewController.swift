@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  MapViewController.swift
 //  Virtual-Tourist
 //
 //  Created by Saad on 12/6/19.
@@ -7,14 +7,20 @@
 //
 
 import UIKit
+import MapKit
+import CoreData
 
-class ViewController: UIViewController {
+class MapViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
+    
 
 
+}
+extension MapViewController: MKMapViewDelegate{
+    
 }
 
