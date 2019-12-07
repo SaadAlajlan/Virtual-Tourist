@@ -9,48 +9,47 @@
 
 import Foundation
 
-class API{
+extension Flickr{
     
-    static var APIKey = "11f4c1210b10c58e8440d88ab5266ba5"
-       // MARK: Flickr
-    struct Flickr {
-        static let APIScheme = "https"
-        static let APIHost = "api.flickr.com"
-        static let APIPath = "/services/rest"
+    
+    // MARK: Constants
+    struct Constants {
+        static var APIKey = "e796a415a27fd1a964e716120e4d0dfa"
         
-        static let SearchBBoxHalfWidth = 1.0
-        static let SearchBBoxHalfHeight = 1.0
-        static let SearchLatRange = (-90.0, 90.0)
-        static let SearchLonRange = (-180.0, 180.0)
+        // MARK: URLs
+        static let ApiScheme = "https"
+        static let ApiHost = "api.flickr.com"
+        static let ApiPath = "/services/rest"
+    }
+    
+    // MARK: Methods
+    struct Methods {
+        // MARK: StudentLocation
+        static let Search = "flickr.photos.search"
     }
     
     // MARK: Flickr Parameter Keys
     struct FlickrParameterKeys {
         static let Method = "method"
         static let APIKey = "api_key"
-        static let GalleryID = "gallery_id"
         static let Extras = "extras"
-        static let Format = "format"
-        static let NoJSONCallback = "nojsoncallback"
         static let SafeSearch = "safe_search"
-        static let Text = "text"
-        static let BoundingBox = "bbox"
-        static let Page = "page"
-        static let Lat = "lat"
-        static let Lon = "lon"
+        static let Longitude = "lon"
+        static let Latitude = "lat"
+        static let Format = "format"
+        static let NoJsonCallback = "nojsoncallback"
         static let PerPage = "per_page"
+        static let Page = "page"
     }
     
     // MARK: Flickr Parameter Values
     struct FlickrParameterValues {
-        static let SearchMethod = "flickr.photos.search"
-        static let APIKey = "11f4c1210b10c58e8440d88ab5266ba5"
-        static let ResponseFormat = "json"
-        static let DisableJSONCallback = "1" /* 1 means "yes" */
-        static let GalleryPhotosMethod = "flickr.galleries.getPhotos"
-        static let GalleryID = "5704-72157622566655097"
         static let MediumURL = "url_m"
+        static let SquareURL = "url_q"
         static let UseSafeSearch = "1"
+        static let Json = "json"
+        static let JsonCallBackValue = "1"
+        static let PerPageValue = "21"
     }
     
     // MARK: Flickr Response Keys
@@ -58,12 +57,11 @@ class API{
         static let Status = "stat"
         static let Photos = "photos"
         static let Photo = "photo"
-        static let Title = "title"
         static let MediumURL = "url_m"
+        static let SquareURL = "url_q"
         static let Pages = "pages"
         static let Total = "total"
-        static let Page = "page"
-
+        
     }
     
     // MARK: Flickr Response Values

@@ -1,12 +1,11 @@
 //
-//  CoreData.swift
-//  Virtual-Tourist
+//  CoreDataStack.swift
 //
-//  Created by Saad on 12/6/19.
-//  Copyright © 2019 saad. All rights reserved.
+//
+//  Created by Fernando Rodríguez Romero on 21/02/16.
+//  Copyright © 2016 udacity.com. All rights reserved.
 //
 
-import Foundation
 import CoreData
 
 // MARK: - CoreDataStack
@@ -25,7 +24,6 @@ struct CoreDataStack {
     
     // MARK: Initializers
     
-
     init?(modelName: String) {
         
         // Assumes the model is in the main bundle
@@ -75,8 +73,6 @@ struct CoreDataStack {
         } catch {
             print("unable to add store at \(dbURL)")
         }
-        
- 
     }
     
     // MARK: Utils
@@ -132,14 +128,12 @@ extension CoreDataStack {
         // context). This last one might take some time and is done
         // in a background queue
         context.performAndWait() {
-            
             if self.context.hasChanges {
                 do {
                     try self.context.save()
                 } catch {
                     fatalError("Error while saving main context: \(error)")
                 }
-                
                 // now we save in the background
                 self.persistingContext.perform() {
                     do {
@@ -157,7 +151,7 @@ extension CoreDataStack {
         if delayInSeconds > 0 {
             do {
                 try self.context.save()
-                print("Autosaving")
+                //print("Autosaving")
             } catch {
                 print("Error while autosaving")
             }
@@ -171,3 +165,4 @@ extension CoreDataStack {
         }
     }
 }
+

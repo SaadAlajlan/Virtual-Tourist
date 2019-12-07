@@ -1,5 +1,5 @@
 //
-//  Photo.swift
+//  Pin.swift
 //  Virtual-Tourist
 //
 //  Created by Saad on 12/6/19.
@@ -10,20 +10,20 @@ import Foundation
 import CoreData
 
 
-public class Photo: NSManagedObject {
+public class Pin: NSManagedObject {
     
-    
-    convenience init(image: NSData?, imageURL: String?, context: NSManagedObjectContext) {
+    convenience init(lat: Double, long: Double,  context: NSManagedObjectContext) {
         
-        
-        if let ent = NSEntityDescription.entity(forEntityName: "Photo", in: context) {
+        if let ent = NSEntityDescription.entity(forEntityName: "Pin", in: context) {
             self.init(entity: ent, insertInto: context)
-            self.nsData = image
-            self.imageURL = imageURL
+            self.lat = lat
+            self.long = long
+            
         } else {
             fatalError("Unable to find Entity name!")
         }
     }
+    
     
     
 }

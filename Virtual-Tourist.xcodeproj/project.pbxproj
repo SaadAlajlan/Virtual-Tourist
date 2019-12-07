@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -14,7 +14,7 @@
 		93463571239A8C4000403B2A /* Virtual_Tourist.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9346356F239A8C4000403B2A /* Virtual_Tourist.xcdatamodeld */; };
 		93463573239A8C4300403B2A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 93463572239A8C4300403B2A /* Assets.xcassets */; };
 		93463576239A8C4300403B2A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93463574239A8C4300403B2A /* LaunchScreen.storyboard */; };
-		93463583239A8E8C00403B2A /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93463582239A8E8C00403B2A /* CollectionViewController.swift */; };
+		93463583239A8E8C00403B2A /* PicCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93463582239A8E8C00403B2A /* PicCollectionViewController.swift */; };
 		9346358F239A947800403B2A /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9346358E239A945000403B2A /* Info.plist */; };
 		93463591239A97CB00403B2A /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93463590239A97CB00403B2A /* API.swift */; };
 		93463593239A987800403B2A /* GCDBlackBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93463592239A987800403B2A /* GCDBlackBox.swift */; };
@@ -23,9 +23,19 @@
 		93463599239AA69B00403B2A /* Pin+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93463598239AA69B00403B2A /* Pin+CoreDataProperties.swift */; };
 		9346359B239AA6B700403B2A /* Photo+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9346359A239AA6B700403B2A /* Photo+CoreDataProperties.swift */; };
 		9346359D239AA6E300403B2A /* CoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9346359C239AA6E300403B2A /* CoreData.swift */; };
+		9346359F239AB94B00403B2A /* PicCollectionViewControllerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9346359E239AB94B00403B2A /* PicCollectionViewControllerCell.swift */; };
+		934635A1239ABB1000403B2A /* Flickr.swift in Sources */ = {isa = PBXBuildFile; fileRef = 934635A0239ABB1000403B2A /* Flickr.swift */; };
+		93C0F5F7239AD6B900F01A89 /* UIViewController+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C0F5F6239AD6B900F01A89 /* UIViewController+Additions.swift */; };
+		93F89C01239B2D95002EDEF7 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 93F89C00239B2D95002EDEF7 /* Kingfisher */; };
+		93F89C03239B2D95002EDEF7 /* KingfisherSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 93F89C02239B2D95002EDEF7 /* KingfisherSwiftUI */; };
+		93F89C07239B5147002EDEF7 /* PicCollectionViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93F89C06239B5147002EDEF7 /* PicCollectionViewController+Extensions.swift */; };
+		93F89C09239B51D8002EDEF7 /* MapViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93F89C08239B51D8002EDEF7 /* MapViewController+Extension.swift */; };
+		D9B2F8A9E6D04F776D87D84F /* Pods_Virtual_Tourist.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59203D982CDD5A8D2131DCF4 /* Pods_Virtual_Tourist.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1E3E5AAA0084763FE80E7573 /* Pods-Virtual-Tourist.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Virtual-Tourist.debug.xcconfig"; path = "Target Support Files/Pods-Virtual-Tourist/Pods-Virtual-Tourist.debug.xcconfig"; sourceTree = "<group>"; };
+		59203D982CDD5A8D2131DCF4 /* Pods_Virtual_Tourist.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Virtual_Tourist.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		93463563239A8C4000403B2A /* Virtual-Tourist.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Virtual-Tourist.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		93463566239A8C4000403B2A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		93463568239A8C4000403B2A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -34,7 +44,7 @@
 		93463570239A8C4000403B2A /* Virtual_Tourist.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Virtual_Tourist.xcdatamodel; sourceTree = "<group>"; };
 		93463572239A8C4300403B2A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		93463575239A8C4300403B2A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		93463582239A8E8C00403B2A /* CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
+		93463582239A8E8C00403B2A /* PicCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PicCollectionViewController.swift; sourceTree = "<group>"; };
 		9346358D239A945000403B2A /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Base; path = Base.lproj/Info.plist; sourceTree = "<group>"; };
 		93463590239A97CB00403B2A /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		93463592239A987800403B2A /* GCDBlackBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GCDBlackBox.swift; sourceTree = "<group>"; };
@@ -43,6 +53,13 @@
 		93463598239AA69B00403B2A /* Pin+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Pin+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		9346359A239AA6B700403B2A /* Photo+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Photo+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		9346359C239AA6E300403B2A /* CoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreData.swift; sourceTree = "<group>"; };
+		9346359E239AB94B00403B2A /* PicCollectionViewControllerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PicCollectionViewControllerCell.swift; sourceTree = "<group>"; };
+		934635A0239ABB1000403B2A /* Flickr.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flickr.swift; sourceTree = "<group>"; };
+		93C0F5F6239AD6B900F01A89 /* UIViewController+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Additions.swift"; sourceTree = "<group>"; };
+		93F89C04239B32F5002EDEF7 /* PassKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PassKit.framework; path = System/Library/Frameworks/PassKit.framework; sourceTree = SDKROOT; };
+		93F89C06239B5147002EDEF7 /* PicCollectionViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PicCollectionViewController+Extensions.swift"; sourceTree = "<group>"; };
+		93F89C08239B51D8002EDEF7 /* MapViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MapViewController+Extension.swift"; sourceTree = "<group>"; };
+		D45663147F64F8E3ED7050BE /* Pods-Virtual-Tourist.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Virtual-Tourist.release.xcconfig"; path = "Target Support Files/Pods-Virtual-Tourist/Pods-Virtual-Tourist.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,17 +67,31 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				93F89C03239B2D95002EDEF7 /* KingfisherSwiftUI in Frameworks */,
+				93F89C01239B2D95002EDEF7 /* Kingfisher in Frameworks */,
+				D9B2F8A9E6D04F776D87D84F /* Pods_Virtual_Tourist.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4714499C0EB751B325A1F176 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				93F89C04239B32F5002EDEF7 /* PassKit.framework */,
+				59203D982CDD5A8D2131DCF4 /* Pods_Virtual_Tourist.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		9346355A239A8C4000403B2A = {
 			isa = PBXGroup;
 			children = (
 				93463565239A8C4000403B2A /* Virtual-Tourist */,
 				93463564239A8C4000403B2A /* Products */,
+				AFF1D495F2EE0E72F0D29B06 /* Pods */,
+				4714499C0EB751B325A1F176 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -80,7 +111,7 @@
 				9346358C239A934D00403B2A /* Resources */,
 				9346358B239A92E500403B2A /* StoryBoards */,
 				9346358A239A92A100403B2A /* Utilities */,
-				93463588239A922500403B2A /* Extentions */,
+				93463588239A922500403B2A /* Extensions */,
 				93463581239A8C6E00403B2A /* Controller */,
 				9346357F239A8C6600403B2A /* Model */,
 				93463580239A8C6B00403B2A /* View */,
@@ -91,6 +122,7 @@
 		9346357D239A8C5900403B2A /* Client */ = {
 			isa = PBXGroup;
 			children = (
+				934635A0239ABB1000403B2A /* Flickr.swift */,
 			);
 			path = Client;
 			sourceTree = "<group>";
@@ -130,21 +162,25 @@
 			isa = PBXGroup;
 			children = (
 				9346356A239A8C4000403B2A /* MapViewController.swift */,
-				93463582239A8E8C00403B2A /* CollectionViewController.swift */,
+				93463582239A8E8C00403B2A /* PicCollectionViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
 		};
-		93463588239A922500403B2A /* Extentions */ = {
+		93463588239A922500403B2A /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				93C0F5F6239AD6B900F01A89 /* UIViewController+Additions.swift */,
+				93F89C06239B5147002EDEF7 /* PicCollectionViewController+Extensions.swift */,
+				93F89C08239B51D8002EDEF7 /* MapViewController+Extension.swift */,
 			);
-			path = Extentions;
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		93463589239A924400403B2A /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				9346359E239AB94B00403B2A /* PicCollectionViewControllerCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -175,6 +211,15 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		AFF1D495F2EE0E72F0D29B06 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1E3E5AAA0084763FE80E7573 /* Pods-Virtual-Tourist.debug.xcconfig */,
+				D45663147F64F8E3ED7050BE /* Pods-Virtual-Tourist.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -182,6 +227,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9346357A239A8C4300403B2A /* Build configuration list for PBXNativeTarget "Virtual-Tourist" */;
 			buildPhases = (
+				538CDCB55C80792CE0BB0533 /* [CP] Check Pods Manifest.lock */,
 				9346355F239A8C4000403B2A /* Sources */,
 				93463560239A8C4000403B2A /* Frameworks */,
 				93463561239A8C4000403B2A /* Resources */,
@@ -191,6 +237,10 @@
 			dependencies = (
 			);
 			name = "Virtual-Tourist";
+			packageProductDependencies = (
+				93F89C00239B2D95002EDEF7 /* Kingfisher */,
+				93F89C02239B2D95002EDEF7 /* KingfisherSwiftUI */,
+			);
 			productName = "Virtual-Tourist";
 			productReference = 93463563239A8C4000403B2A /* Virtual-Tourist.app */;
 			productType = "com.apple.product-type.application";
@@ -219,6 +269,9 @@
 				Base,
 			);
 			mainGroup = 9346355A239A8C4000403B2A;
+			packageReferences = (
+				93F89BFF239B2D95002EDEF7 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+			);
 			productRefGroup = 93463564239A8C4000403B2A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -242,23 +295,53 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		538CDCB55C80792CE0BB0533 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Virtual-Tourist-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		9346355F239A8C4000403B2A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				93463595239AA67900403B2A /* Photo.swift in Sources */,
+				93F89C09239B51D8002EDEF7 /* MapViewController+Extension.swift in Sources */,
 				93463571239A8C4000403B2A /* Virtual_Tourist.xcdatamodeld in Sources */,
 				9346356B239A8C4000403B2A /* MapViewController.swift in Sources */,
 				93463599239AA69B00403B2A /* Pin+CoreDataProperties.swift in Sources */,
+				934635A1239ABB1000403B2A /* Flickr.swift in Sources */,
 				9346359D239AA6E300403B2A /* CoreData.swift in Sources */,
 				93463597239AA68900403B2A /* Pin.swift in Sources */,
 				93463567239A8C4000403B2A /* AppDelegate.swift in Sources */,
+				93C0F5F7239AD6B900F01A89 /* UIViewController+Additions.swift in Sources */,
+				93F89C07239B5147002EDEF7 /* PicCollectionViewController+Extensions.swift in Sources */,
 				93463569239A8C4000403B2A /* SceneDelegate.swift in Sources */,
 				93463591239A97CB00403B2A /* API.swift in Sources */,
 				9346359B239AA6B700403B2A /* Photo+CoreDataProperties.swift in Sources */,
-				93463583239A8E8C00403B2A /* CollectionViewController.swift in Sources */,
+				93463583239A8E8C00403B2A /* PicCollectionViewController.swift in Sources */,
 				93463593239A987800403B2A /* GCDBlackBox.swift in Sources */,
+				9346359F239AB94B00403B2A /* PicCollectionViewControllerCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -408,10 +491,13 @@
 		};
 		9346357B239A8C4300403B2A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1E3E5AAA0084763FE80E7573 /* Pods-Virtual-Tourist.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = B7W44F6M2Q;
 				INFOPLIST_FILE = "Virtual-Tourist/Resources/Base.lproj/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -425,10 +511,13 @@
 		};
 		9346357C239A8C4300403B2A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D45663147F64F8E3ED7050BE /* Pods-Virtual-Tourist.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = B7W44F6M2Q;
 				INFOPLIST_FILE = "Virtual-Tourist/Resources/Base.lproj/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -462,6 +551,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		93F89BFF239B2D95002EDEF7 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.11.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		93F89C00239B2D95002EDEF7 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 93F89BFF239B2D95002EDEF7 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+		93F89C02239B2D95002EDEF7 /* KingfisherSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 93F89BFF239B2D95002EDEF7 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = KingfisherSwiftUI;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		9346356F239A8C4000403B2A /* Virtual_Tourist.xcdatamodeld */ = {
